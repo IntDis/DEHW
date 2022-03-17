@@ -30,8 +30,10 @@ namespace HW_AIO
             
         }
 
-        public static void GetNumbersIfDivisionByAIsZero(int a)                                     //3.2
+        public static int[] GetNumbersIfDivisionByAIsZero(int a)                                    //3.2
         {
+            int count = 0;
+
             if (a <= 0)
             {
                 throw new Exception("A cannot be 0 or lower");
@@ -40,8 +42,29 @@ namespace HW_AIO
             {
                 for (int i = 0; i < 1001; i += a)
                 {
-                    Console.Write($"{i} ");
+                    count++;
                 }
+
+                int[] result = new int[count-1];
+
+
+                //for (int i = a; i < 1001; i += a)
+                //{
+                //    result.Append(i);
+                //}
+
+                int b = 0;
+                int tmp = a;
+                while (tmp < 1001)
+                {
+                    result[b] = tmp;
+                    tmp += a;
+                    b++;
+                }
+
+
+                return (result);
+
             }
         }
 

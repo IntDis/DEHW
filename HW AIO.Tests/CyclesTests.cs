@@ -13,17 +13,20 @@ namespace HW_AIO.Tests
             Assert.AreEqual(expected, actual);
         }                           //3.1
 
-        public void GetNumbersIfDivisionByAIsZero(int a, int expected)
+
+        [TestCase(100, new int[] {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000})]
+        [TestCase(333, new int[] {333, 666, 999})]
+        [TestCase(1000, new int[] {1000})]
+        public void GetNumbersIfDivisionByAIsZeroTest(int a, int[] expected)
         {
-            
-        }                        //3.2 not finished
+            int[] Actual = Cycles.GetNumbersIfDivisionByAIsZero(a);
+            Assert.AreEqual(expected, Actual);
+        }                  //3.2 
 
 
         [TestCase(0, 0)]
         [TestCase(100, 9)]
         [TestCase(-101, 10)]
-
-
         public void GetCountOfNumbersIfTheirSquareIsLowerThanA(int a, int expected)
         {
             int actual = Cycles.GetCountOfNumbersIfTheirSquareIsLowerThanA(a);

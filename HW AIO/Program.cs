@@ -28,7 +28,7 @@ Console.WriteLine();
 ///*_____________________________________________________________________________________________*/
 //Console.WriteLine(Cycles.GetAInDegreeOfB(3, 2));                                              //3.1
 
-//Cycles.GetNumbersIfDivisionByAIsZero(25);                                                     //3.2
+//ArrayMethods.PrintArrayElements(Cycles.GetNumbersIfDivisionByAIsZero(225));                   //3.2
 
 //Console.WriteLine(Cycles.GetCountOfNumbersIfTheirSquareIsLowerThanA(88));                     //3.3
 
