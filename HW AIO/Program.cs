@@ -1,4 +1,5 @@
 ﻿using HW_AIO;
+Console.WriteLine();
 
 //Variables.GetADividedByB(0, 2);                                                               //1.1
 
@@ -25,7 +26,7 @@
 
 
 ///*_____________________________________________________________________________________________*/
-//Console.WriteLine(Cycles.GetAInDegreeOfB(3, 3));                                              //3.1
+//Console.WriteLine(Cycles.GetAInDegreeOfB(3, 2));                                              //3.1
 
 //Cycles.GetNumbersIfDivisionByAIsZero(25);                                                     //3.2
 

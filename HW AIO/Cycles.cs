@@ -10,12 +10,24 @@ namespace HW_AIO
     {
         public static int GetAInDegreeOfB(int a, int b)                                             //3.1 
         {
-            int result = a;
-            for (int i = 1; i < b; i++)
+            if (b == 0)
             {
-                result *= a;
+                return 1;
             }
-            return result;
+            else if (b < 0)
+            {
+                throw new Exception("B cannot be lower than 0");
+            }
+            else
+            {
+                int result = a;
+                for (int i = 1; i < b; i++)
+                {
+                    result *= a;
+                }
+                return result;
+            }
+            
         }
 
         public static void GetNumbersIfDivisionByAIsZero(int a)                                     //3.2
@@ -29,6 +41,22 @@ namespace HW_AIO
                 for (int i = 0; i < 1001; i += a)
                 {
                     Console.Write($"{i} ");
+                }
+            }
+        }
+
+        public static void GetNumbersIfDivisionByAIsZero2(int a)                                     //3.2
+        {
+            
+            if (a <= 0)
+            {
+                throw new Exception("A cannot be 0 or lower");
+            }
+            else
+            {
+                for (int i = 0; i < 1001; i += a)
+                {
+                    
                 }
             }
         }
