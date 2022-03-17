@@ -30,7 +30,7 @@ Console.WriteLine();
 
 //Cycles.GetNumbersIfDivisionByAIsZero(25);                                                     //3.2
 
-//Console.WriteLine(Cycles.GetCountOfNumbersIfTheirSquareIsLowerThanA(17));                     //3.3
+//Console.WriteLine(Cycles.GetCountOfNumbersIfTheirSquareIsLowerThanA(88));                     //3.3
 
 //Console.WriteLine(Cycles.GetMaxDividerOfA(135));                                              //3.4
 

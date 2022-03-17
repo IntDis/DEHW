@@ -45,27 +45,11 @@ namespace HW_AIO
             }
         }
 
-        public static void GetNumbersIfDivisionByAIsZero2(int a)                                     //3.2
-        {
-            
-            if (a <= 0)
-            {
-                throw new Exception("A cannot be 0 or lower");
-            }
-            else
-            {
-                for (int i = 0; i < 1001; i += a)
-                {
-                    
-                }
-            }
-        }
-
         public static int GetCountOfNumbersIfTheirSquareIsLowerThanA(int a)                         //3.3
         {
             int count = 0;
 
-            for (int i = 1; i * i < a; i++)
+            for (int i = 1; i * i < Math.Abs(a); i++)
             {
                 count += 1;
             }
