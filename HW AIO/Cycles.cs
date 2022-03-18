@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -145,7 +145,7 @@ namespace HW_AIO
                 a = b;
                 b = rest;
             }
-            return b;
+            return Math.Abs(b);
         }
 
         public static int GetThirdRootFromNumberByHalfDivision(int a)                               //3.8
@@ -193,7 +193,7 @@ namespace HW_AIO
             return count;
         }
 
-        public static string GetReversedNumber(double a)                                            //3.10
+        public static string GetReversedNumber(int a)                                               //3.10
         {
             string result = "";
 
@@ -213,8 +213,9 @@ namespace HW_AIO
             return result;
         }
 
-        public static void WriteNumbersIfEvenDigitsSumBiggerThanOdd(int a)                          //3.11
+        public static void WriteNumbersIfEvenDigitsSumBiggerThanOdd(int a)                         //3.11
         {
+            
             for (int i = 0; i < a; i++)
             {
                 int sumEven = 0;
@@ -248,6 +249,11 @@ namespace HW_AIO
             bool result = false;
             a = Math.Abs(a);
             b = Math.Abs(b);
+
+            if (a == b && a == 0)
+            {
+                result = true;
+            }
 
             while (b != 0)
             {

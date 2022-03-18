@@ -8,6 +8,7 @@ namespace HW_AIO
 {
     public class Variables
     {
+
         public static void GetADividedByB(int a, int b)
         {
             if (b == 0)
@@ -16,7 +17,7 @@ namespace HW_AIO
             }
             else
                 Console.WriteLine($"{a}:{b} = {a / b}, остаток = {a % b}");
-        }                                   //1
+        }                                    //1
 
         public static double GetSolutionOfQuadraticEquation(int a, int b)
         {
@@ -28,16 +29,21 @@ namespace HW_AIO
             {
                 return (5 * a + b * b) / (b - a);
             }
-        }                 //2
+        }                  //2
 
-        public static void SwapAtoB(string a, string b)
+        public static void SwapAtoB(ref string a, ref string b)
         {
             string tmp = a;
             a = b;
             b = tmp;
+        }                            //3
 
-            Console.WriteLine($"{a} {b}");
-        }                                   //3
+        public static void SwapAToBInts(ref int a, ref int b)
+        {
+            int tmp = a;
+            a = b;
+            b = tmp;
+        }
 
         public static double GetSolutionOfLinearEquation(int a, int b, int c)
         {

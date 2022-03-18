@@ -38,7 +38,7 @@ Console.WriteLine();
 
 //Console.WriteLine(Cycles.GetPositonValueFromFibonacci(7));                                    //3.6
 
-//Console.WriteLine(Cycles.GetMaxDividerOfTwoNumbersByEuclid(48, 32));                          //3.7
+//Console.WriteLine(Cycles.GetMaxDividerOfTwoNumbersByEuclid(-48, 32));                         //3.7
 
 //Console.WriteLine(Cycles.GetThirdRootFromNumberByHalfDivision(512));                          //3.8
 
