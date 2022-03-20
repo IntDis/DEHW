@@ -31,41 +31,24 @@ namespace HW_AIO
         }
 
         public static int[] GetNumbersIfDivisionByAIsZero(int a)                                    //3.2
-        {
-            int count = 0;
-
-            if (a <= 0)
+        {   
+            if (a <= 0 || a > 1000)
             {
-                throw new Exception("A cannot be 0 or lower");
+                throw new Exception("A cannot be lower than 1 and bigger than 1000");
             }
             else
             {
-                for (int i = 0; i < 1001; i += a)
+                int count = 1000 / a;
+                int[] result = new int[count];
+
+                for (int i = 0; i < count; i++)
                 {
-                    count++;
+                    result[i] = (i + 1) * a;
                 }
 
-                int[] result = new int[count-1];
-
-
-                //for (int i = a; i < 1001; i += a)
-                //{
-                //    result.Append(i);
-                //}
-
-                int b = 0;
-                int tmp = a;
-                while (tmp < 1001)
-                {
-                    result[b] = tmp;
-                    tmp += a;
-                    b++;
-                }
-
-
-                return (result);
-
+                return result;
             }
+            
         }
 
         public static int GetCountOfNumbersIfTheirSquareIsLowerThanA(int a)                         //3.3
@@ -213,7 +196,7 @@ namespace HW_AIO
             return result;
         }
 
-        public static void WriteNumbersIfEvenDigitsSumBiggerThanOdd(int a)                         //3.11
+        public static void WriteNumbersIfEvenDigitsSumBiggerThanOdd(int a)                          //3.11
         {
             
             for (int i = 0; i < a; i++)

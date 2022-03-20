@@ -44,32 +44,34 @@ namespace HW_AIO
                 return "Точка лежит на оси";
         }                         //2.2
 
-        public static void GetNumbersInAscendingOrder(double a, double b, double c)
+        public static string GetNumbersInAscendingOrder(double a, double b, double c)
         {
             if ((a > b) && (b > c))                  //321
             {
-                Console.WriteLine($"\nВведённые числа в порядке возрастания: {c}, {b}, {a}.");
+                return $"\nВведённые числа в порядке возрастания: {c}, {b}, {a}.";
             }
             else if ((a > b) && (a > c))             //312
             {
-                Console.WriteLine($"\nВведённые числа в порядке возрастания: {b}, {c}, {a}.");
+                return $"\nВведённые числа в порядке возрастания: {b}, {c}, {a}.";
             }
             else if ((a < b) && (b > c) && (c < a))  //231
             {
-                Console.WriteLine($"\nВведённые числа в порядке возрастания: {c}, {a}, {b}.");
+                return $"\nВведённые числа в порядке возрастания: {c}, {a}, {b}.";
             }
             else if ((a > b) && (b < c) && (c > a))  //213
             {
-                Console.WriteLine($"\nВведённые числа в порядке возрастания: {b}, {a}, {c}.");
+                return $"\nВведённые числа в порядке возрастания: {b}, {a}, {c}.";
             }
             else if ((a < b) && (b > c) && (c > a))  //132
             {
-                Console.WriteLine($"\nВведённые числа в порядке возрастания: {a}, {c}, {b}.");
+                return $"\nВведённые числа в порядке возрастания: {a}, {c}, {b}.";
             }
             else if ((a < b) && (b < c))             //123
             {
-                Console.WriteLine($"\nВведённые числа в порядке возрастания: {a}, {b}, {c}.");
+                return $"\nВведённые числа в порядке возрастания: {a}, {b}, {c}.";
             }
+            else
+                throw new Exception("Problem with input numbers");
         }        //2.3
 
         public static void GetSolutionOfQuadraticEquation(double a, double b, double c)

@@ -43,6 +43,7 @@ namespace HW_AIO
             int tmp = a;
             a = b;
             b = tmp;
+            
         }
 
         public static double GetSolutionOfLinearEquation(int a, int b, int c)
@@ -57,21 +58,21 @@ namespace HW_AIO
             }
         }              //4
 
-        public static void GetLinearEquation(double x1, double y1, double x2, double y2)
+        public static string GetLinearEquation(double x1, double y1, double x2, double y2)
         {
             double k = (y1 - y2) / (x1 - x2);
             double b = y2 - k * x2;
 
             if (b == 0)
             {
-                Console.WriteLine($"\nY = {k}X");
+                return ($"\nY = {k}X");
             }
             else if (b < 0)
             {
-                Console.WriteLine($"\nY = {k}X + ({b})");
+                return ($"\nY = {k}X + ({b})");
             }
             else
-                Console.WriteLine($"\nY = {k}X + {b}");
+                return ($"\nY = {k}X + {b}");
         }   //5
     }
 }

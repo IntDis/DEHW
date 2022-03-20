@@ -5,11 +5,11 @@ Console.WriteLine();
 
 //Console.WriteLine(Variables.GetSolutionOfQuadraticEquation(6, 3));                            //1.2
 
-//Variables.SwapAtoB("string", "32132");                                                        //1.3
+////Variables.SwapAtoB("string", "32132");                                                        //1.3 //need fix 
 
 //Console.WriteLine(Variables.GetSolutionOfLinearEquation(3, 5, 11));                           //1.4
 
-//Variables.GetLinearEquation(1, 1, 3, 4);                                                      //1.5
+//Console.WriteLine(Variables.GetLinearEquation(1, 1, 3, 4));                                   //1.5
 
 
 ///*_____________________________________________________________________________________________*/
@@ -18,7 +18,7 @@ Console.WriteLine();
 
 //Console.WriteLine(Branches.GetQuarterOfPoint(7.25, -3));                                      //2.2
 
-//Branches.GetNumbersInAscendingOrder(111, 0, -232.5);                                          //2.3
+//Console.WriteLine(Branches.GetNumbersInAscendingOrder(111, 0, -232.5));                       //2.3
 
 //Branches.GetSolutionOfQuadraticEquation(1, 0, -49);                                           //2.4
 
@@ -28,7 +28,7 @@ Console.WriteLine();
 ///*_____________________________________________________________________________________________*/
 //Console.WriteLine(Cycles.GetAInDegreeOfB(3, 2));                                              //3.1
 
-//ArrayMethods.PrintArrayElements(Cycles.GetNumbersIfDivisionByAIsZero(225));                   //3.2
+//ArrayMethods.PrintArrayElements(Cycles.GetNumbersIfDivisionByAIsZero(333));                   //3.2
 
 //Console.WriteLine(Cycles.GetCountOfNumbersIfTheirSquareIsLowerThanA(88));                     //3.3
 
