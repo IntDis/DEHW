@@ -1,11 +1,22 @@
 ﻿using HW_AIO;
 Console.WriteLine();
-
-//Variables.GetADividedByB(0, 2);                                                               //1.1
+//int total;
+//int rest;
+//Variables.GetADividedByB(11, 2, out total, out rest);                                                               //1.1
+//Console.WriteLine($"A/B = {total}, A%B = {rest}");
 
 //Console.WriteLine(Variables.GetSolutionOfQuadraticEquation(6, 3));                            //1.2
 
-////Variables.SwapAtoB("string", "32132");                                                        //1.3 //need fix 
+//string a = "string";
+//string b = "12345678";
+//Variables.SwapAtoB(ref a, ref b);                                                             //1.3 
+//Console.WriteLine($"a = {a}, b = {b}");
+
+//int a = 5;
+//int b = 25;
+//Console.WriteLine($"a = {a}, b = {b}");
+//Variables.SwapAToBInts(ref a, ref b);                             //int swap method proof
+//Console.WriteLine($"a = {a}, b = {b}");
 
 //Console.WriteLine(Variables.GetSolutionOfLinearEquation(3, 5, 11));                           //1.4
 
@@ -49,3 +60,20 @@ Console.WriteLine();
 //Cycles.WriteNumbersIfEvenDigitsSumBiggerThanOdd(1234);                                        //3.11
 
 //Console.WriteLine(Cycles.AreNumbersHavingSameDigits(-1000, 1024));                            //3.12
+
+
+///*_____________________________________________________________________________________________*/
+
+//ArrayMethods.PrintArray(ArrayMethods.GenerateRandomArray(10));
+
+int[] arr = ArrayMethods.GenerateRandomArray(5);
+ArrayMethods.PrintArray(arr);
+Console.WriteLine(ArrayMethods.GetMinElement(arr));                                           //4.1
+
+Console.WriteLine(ArrayMethods.GetMaxElement(arr));                                           //4.2
+
+Console.WriteLine(ArrayMethods.GetMinElementIndex(arr));                                      //4.3
+
+Console.WriteLine(ArrayMethods.GetMaxElementIndex(arr));                                      //4.4
+
+Console.WriteLine(ArrayMethods.GetSumOfEvenNumbers(arr));                                     //4.5

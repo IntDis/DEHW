@@ -9,15 +9,19 @@ namespace HW_AIO
     public class Variables
     {
 
-        public static void GetADividedByB(int a, int b)
+        public static void GetADividedByB(int a, int b, out int total, out int rest)
         {
             if (b == 0)
             {
                 throw new Exception("B cannot be 0");
             }
             else
-                Console.WriteLine($"{a}:{b} = {a / b}, остаток = {a % b}");
-        }                                    //1
+            {
+                total = a / b;
+                rest = a % b;
+            }
+        }          //1
+
 
         public static double GetSolutionOfQuadraticEquation(int a, int b)
         {
@@ -29,14 +33,14 @@ namespace HW_AIO
             {
                 return (5 * a + b * b) / (b - a);
             }
-        }                  //2
+        }                     //2
 
         public static void SwapAtoB(ref string a, ref string b)
         {
             string tmp = a;
             a = b;
             b = tmp;
-        }                            //3
+        }                               //3
 
         public static void SwapAToBInts(ref int a, ref int b)
         {
@@ -56,7 +60,7 @@ namespace HW_AIO
             {
                 return (c - b) / a;
             }
-        }              //4
+        }                 //4
 
         public static string GetLinearEquation(double x1, double y1, double x2, double y2)
         {
@@ -73,6 +77,6 @@ namespace HW_AIO
             }
             else
                 return ($"\nY = {k}X + {b}");
-        }   //5
+        }    //5
     }
 }
