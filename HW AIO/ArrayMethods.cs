@@ -18,6 +18,18 @@ namespace HW_AIO
             Console.WriteLine();
         }
 
+        public static void SwapAToB<T>(ref T[] array, int firstIndex, int secondIndex)
+        {
+            if(array.Length == 0)
+            {
+                throw new ArgumentException("Array length cannot be 0");
+            }
+
+            T tmp = array[firstIndex];
+            array[firstIndex] = array[secondIndex];
+            array[secondIndex] = tmp;
+        }
+
         public static int[] GenerateRandomArray(int size)
         {
             if (size < 0)
@@ -116,7 +128,7 @@ namespace HW_AIO
             return index;
         }                          //4.4
 
-        public static int GetSumOfEvenNumbers(int[] array)
+        public static int GetSumOfEvenIndexNumbers(int[] array)
         {
             int sumOfEvenNumbers = 0;
 
@@ -125,6 +137,73 @@ namespace HW_AIO
                 sumOfEvenNumbers += array[i];
             }
             return sumOfEvenNumbers;
-        }
+        }                    //4.5
+
+        public static void ReverseArray(ref int[] array)
+        {
+            int count = 1;
+            for (int i = 0; i < array.Length / 2; i++)
+            {
+                SwapAToB(ref array, i, array.Length - count);
+                count++;
+
+            }
+        }                           //4.6
+
+        public static int GetAmountOfOddElements(int[] array)
+        {
+            int oddCounter = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] % 2 != 0)
+                {
+                    oddCounter++;
+                }
+            }
+            return oddCounter;
+        }                      //4.7
+
+        public static void ReverseHalfOfArray(ref int[] array)
+        {
+            int evensity = array.Length % 2;
+
+            for (int i = 0; i < array.Length / 2; i++)
+            {   
+                SwapAToB(ref array, i, array.Length / 2 + i + evensity);
+            }
+        }                     //4.8
+
+        public static void SortArrayInAscendingOrderByInjection(ref int[] array)
+        {
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                for (int j = i; j > 0 && array[j - 1] > array[j]; j--)
+                {
+                    SwapAToB(ref array, j - 1, j);
+                }
+            }
+        }   //4.9
+
+        public static void SortArrayInDescendingOrderBySelection(ref int[] array)
+        {
+            int maxElement;
+            int max;
+            for (int i = 0; i < array.Length; i++)
+            {
+                max = i;
+
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[j] > array[max])
+                    {
+                        max = j;
+                        maxElement = array[j];
+                    }
+                }
+
+                SwapAToB(ref array, i, max);
+            }
+        }  //4.10
     }
 }
