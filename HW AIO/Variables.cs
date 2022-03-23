@@ -35,14 +35,14 @@ namespace HW_AIO
             }
         }                     //2
 
-        public static void SwapAtoB(ref string a, ref string b)
+        public static void SwapAToB(ref string a, ref string b)
         {
             string tmp = a;
             a = b;
             b = tmp;
         }                               //3
 
-        public static void SwapAToBInts(ref int a, ref int b)
+        public static void SwapAToB(ref int a, ref int b)
         {
             int tmp = a;
             a = b;

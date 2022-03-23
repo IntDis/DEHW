@@ -1,22 +1,24 @@
 ﻿using HW_AIO;
 Console.WriteLine();
+
 //int total;
 //int rest;
-//Variables.GetADividedByB(11, 2, out total, out rest);                                                               //1.1
-//Console.WriteLine($"A/B = {total}, A%B = {rest}");
+//Variables.GetADividedByB(11, 2, out total, out rest);
+//Console.WriteLine($"A/B = {total}, A%B = {rest}");                                            //1.1
 
 //Console.WriteLine(Variables.GetSolutionOfQuadraticEquation(6, 3));                            //1.2
 
 //string a = "string";
 //string b = "12345678";
-//Variables.SwapAtoB(ref a, ref b);                                                             //1.3 
+//Console.WriteLine($"a = {a}, b = {b}");
+//Variables.SwapAToB(ref a, ref b);                             //string swap method
 //Console.WriteLine($"a = {a}, b = {b}");
 
-//int a = 5;
-//int b = 25;
-//Console.WriteLine($"a = {a}, b = {b}");
-//Variables.SwapAToBInts(ref a, ref b);                             //int swap method proof
-//Console.WriteLine($"a = {a}, b = {b}");
+//int f = 5;
+//int m = 25;
+//Console.WriteLine($"f = {f}, m = {m}");
+//Variables.SwapAToB(ref f, ref m);                             //int swap method
+//Console.WriteLine($"f = {f}, m = {m}");                                                       //1.3 
 
 //Console.WriteLine(Variables.GetSolutionOfLinearEquation(3, 5, 11));                           //1.4
 
@@ -39,7 +41,7 @@ Console.WriteLine();
 ///*_____________________________________________________________________________________________*/
 //Console.WriteLine(Cycles.GetAInDegreeOfB(3, 2));                                              //3.1
 
-//ArrayMethods.PrintArrayElements(Cycles.GetNumbersIfDivisionByAIsZero(333));                   //3.2
+//ArrayMethods.PrintArray(Cycles.GetNumbersIfDivisionByAIsZero(333));                           //3.2
 
 //Console.WriteLine(Cycles.GetCountOfNumbersIfTheirSquareIsLowerThanA(88));                     //3.3
 
@@ -64,16 +66,31 @@ Console.WriteLine();
 
 ///*_____________________________________________________________________________________________*/
 
-//ArrayMethods.PrintArray(ArrayMethods.GenerateRandomArray(10));
 
 int[] arr = ArrayMethods.GenerateRandomArray(5);
 ArrayMethods.PrintArray(arr);
-Console.WriteLine(ArrayMethods.GetMinElement(arr));                                           //4.1
+//ArrayMethods.SwapAToB(ref arr, 0, arr.Length - 1);
+//ArrayMethods.PrintArray(arr);
 
-Console.WriteLine(ArrayMethods.GetMaxElement(arr));                                           //4.2
+//Console.WriteLine(ArrayMethods.GetMinElement(arr));                                           //4.1
 
-Console.WriteLine(ArrayMethods.GetMinElementIndex(arr));                                      //4.3
+//Console.WriteLine(ArrayMethods.GetMaxElement(arr));                                           //4.2
 
-Console.WriteLine(ArrayMethods.GetMaxElementIndex(arr));                                      //4.4
+//Console.WriteLine(ArrayMethods.GetMinElementIndex(arr));                                      //4.3
 
-Console.WriteLine(ArrayMethods.GetSumOfEvenNumbers(arr));                                     //4.5
+//Console.WriteLine(ArrayMethods.GetMaxElementIndex(arr));                                      //4.4
+
+//Console.WriteLine(ArrayMethods.GetSumOfEvenIndexNumbers(arr));                                //4.5
+
+//ArrayMethods.ReverseArray(ref arr);                                                           //4.6
+//ArrayMethods.PrintArray(arr);
+
+//Console.WriteLine(ArrayMethods.GetAmountOfOddElements(arr));                                  //4.7
+
+//ArrayMethods.ReverseHalfOfArray(ref arr);                                                     //4.8
+//ArrayMethods.PrintArray(arr);
+
+//ArrayMethods.SortArrayInAscendingOrderByInjection(ref arr);                                   //4.9
+
+//ArrayMethods.SortArrayInDescendingOrderBySelection(ref arr);                                  //4.10
+//ArrayMethods.PrintArray(arr);
