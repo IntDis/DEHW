@@ -72,7 +72,7 @@ namespace HW_AIO
             }
             else
                 throw new Exception("Problem with input numbers");
-        }        //2.3
+        }      //2.3
 
         public static void GetSolutionOfQuadraticEquation(double a, double b, double c)
         {

@@ -8,44 +8,6 @@ namespace HW_AIO
 {
     public class ArrayMethods
     {
-        public static void PrintArray(int[] array)
-        {
-            foreach(int i in array)
-            {
-                Console.Write($"{i} ");
-                
-            }
-            Console.WriteLine();
-        }
-
-        public static void SwapAToB<T>(ref T[] array, int firstIndex, int secondIndex)
-        {
-            if(array.Length == 0)
-            {
-                throw new ArgumentException("Array length cannot be 0");
-            }
-
-            T tmp = array[firstIndex];
-            array[firstIndex] = array[secondIndex];
-            array[secondIndex] = tmp;
-        }
-
-        public static int[] GenerateRandomArray(int size)
-        {
-            if (size < 0)
-            {
-                throw new ArgumentException("Invalid size");
-            }
-
-            int[] array = new int[size];
-            for(int i = 0; i < array.Length; i++)
-            {
-                Random random = new Random();
-                array[i] = random.Next(100);
-            }
-            return array;
-        }
-
         public static int GetMaxElement(int[] array)
         {
             if (array.Length == 0)
@@ -139,20 +101,24 @@ namespace HW_AIO
             return sumOfEvenNumbers;
         }                    //4.5
 
-        public static void ReverseArray(ref int[] array)
+        public static int[] ReverseArray(int[] array)
         {
+            int[] copiedArray = CopyArray(array);
+
             int count = 1;
-            for (int i = 0; i < array.Length / 2; i++)
+            for (int i = 0; i < copiedArray.Length / 2; i++)
             {
-                SwapAToB(ref array, i, array.Length - count);
+                SwapAToB(ref copiedArray, i, copiedArray.Length - count);
                 count++;
 
             }
-        }                           //4.6
+            return copiedArray;
+        }                              //4.6
 
         public static int GetAmountOfOddElements(int[] array)
         {
             int oddCounter = 0;
+
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] % 2 != 0)
@@ -163,47 +129,108 @@ namespace HW_AIO
             return oddCounter;
         }                      //4.7
 
-        public static void ReverseHalfOfArray(ref int[] array)
+        public static int[] ReverseHalfOfArray(int[] array)
         {
-            int evensity = array.Length % 2;
+            int[] copiedArray = CopyArray(array);
+            int evensity = copiedArray.Length % 2;
 
-            for (int i = 0; i < array.Length / 2; i++)
+            for (int i = 0; i < copiedArray.Length / 2; i++)
             {   
-                SwapAToB(ref array, i, array.Length / 2 + i + evensity);
+                SwapAToB(ref copiedArray, i, copiedArray.Length / 2 + i + evensity);
             }
-        }                     //4.8
 
-        public static void SortArrayInAscendingOrderByInjection(ref int[] array)
+            return copiedArray;
+
+        }                        //4.8
+
+        public static int[] SortArrayInAscendingOrderByInjection(int[] array)
         {
+            int[] copiedArray = CopyArray(array);
 
-            for (int i = 1; i < array.Length; i++)
+            for (int i = 1; i < copiedArray.Length; i++)
             {
-                for (int j = i; j > 0 && array[j - 1] > array[j]; j--)
+                for (int j = i; j > 0 && copiedArray[j - 1] > copiedArray[j]; j--)
                 {
-                    SwapAToB(ref array, j - 1, j);
+                    SwapAToB(ref copiedArray, j - 1, j);
                 }
             }
-        }   //4.9
+            return copiedArray;
+        }      //4.9
 
-        public static void SortArrayInDescendingOrderBySelection(ref int[] array)
+        public static int[] SortArrayInDescendingOrderBySelection(int[] array)
         {
+            int[] copiedArray = CopyArray(array);
             int maxElement;
             int max;
-            for (int i = 0; i < array.Length; i++)
+
+            for (int i = 0; i < copiedArray.Length; i++)
             {
                 max = i;
 
-                for (int j = i + 1; j < array.Length; j++)
+                for (int j = i + 1; j < copiedArray.Length; j++)
                 {
-                    if (array[j] > array[max])
+                    if (copiedArray[j] > copiedArray[max])
                     {
                         max = j;
-                        maxElement = array[j];
+                        maxElement = copiedArray[j];
                     }
                 }
 
-                SwapAToB(ref array, i, max);
+                SwapAToB(ref copiedArray, i, max);
             }
-        }  //4.10
+
+            return copiedArray;
+        }     //4.10
+
+        public static void PrintArray(int[] array)
+        {
+            foreach (int i in array)
+            {
+                Console.Write($"{i} ");
+
+            }
+            Console.WriteLine();
+        }
+
+        public static void SwapAToB<T>(ref T[] array, int firstIndex, int secondIndex)
+        {
+            if (array.Length == 0)
+            {
+                throw new ArgumentException("Array length cannot be 0");
+            }
+
+            T tmp = array[firstIndex];
+            array[firstIndex] = array[secondIndex];
+            array[secondIndex] = tmp;
+        }
+
+        public static int[] CopyArray(int[] array)
+        {
+            int[] copiedArray = new int[array.Length];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                copiedArray[i] = array[i];
+            }
+
+            return copiedArray;
+        }
+
+        public static int[] GenerateRandomArray(int size)
+        {
+            if (size < 0)
+            {
+                throw new ArgumentException("Invalid size");
+            }
+
+            Random random = new Random();
+            int[] array = new int[size];
+            for (int i = 0; i < array.Length; i++)
+            {
+
+                array[i] = random.Next(100);
+            }
+            return array;
+        }
     }
 }

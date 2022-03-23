@@ -67,10 +67,12 @@ Console.WriteLine();
 ///*_____________________________________________________________________________________________*/
 
 
-int[] arr = ArrayMethods.GenerateRandomArray(5);
+int[] arr = ArrayMethods.GenerateRandomArray(6);
 ArrayMethods.PrintArray(arr);
+
 //ArrayMethods.SwapAToB(ref arr, 0, arr.Length - 1);
-//ArrayMethods.PrintArray(arr);
+
+
 
 //Console.WriteLine(ArrayMethods.GetMinElement(arr));                                           //4.1
 
@@ -82,15 +84,14 @@ ArrayMethods.PrintArray(arr);
 
 //Console.WriteLine(ArrayMethods.GetSumOfEvenIndexNumbers(arr));                                //4.5
 
-//ArrayMethods.ReverseArray(ref arr);                                                           //4.6
-//ArrayMethods.PrintArray(arr);
+//ArrayMethods.PrintArray(ArrayMethods.ReverseArray(arr));                                      //4.6
 
 //Console.WriteLine(ArrayMethods.GetAmountOfOddElements(arr));                                  //4.7
 
-//ArrayMethods.ReverseHalfOfArray(ref arr);                                                     //4.8
-//ArrayMethods.PrintArray(arr);
+//ArrayMethods.PrintArray(ArrayMethods.ReverseHalfOfArray(arr));                                //4.8
 
-//ArrayMethods.SortArrayInAscendingOrderByInjection(ref arr);                                   //4.9
+//ArrayMethods.PrintArray(ArrayMethods.SortArrayInAscendingOrderByInjection(arr));              //4.9
 
-//ArrayMethods.SortArrayInDescendingOrderBySelection(ref arr);                                  //4.10
-//ArrayMethods.PrintArray(arr);
+//ArrayMethods.PrintArray(ArrayMethods.SortArrayInDescendingOrderBySelection(arr));             //4.10
+
+
