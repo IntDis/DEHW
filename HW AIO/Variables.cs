@@ -22,7 +22,6 @@ namespace HW_AIO
             }
         }          //1
 
-
         public static double GetSolutionOfQuadraticEquation(int a, int b)
         {
             if (b == 0)

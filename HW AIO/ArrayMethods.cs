@@ -12,7 +12,7 @@ namespace HW_AIO
         {
             if (array.Length == 0)
             {
-                throw new ArgumentException("Invalid array");
+                throw new Exception("Invalid array");
             }
 
             int max = array[0];
