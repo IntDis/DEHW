@@ -101,14 +101,14 @@ namespace HW_AIO
             return sumOfEvenNumbers;
         }                    //4.5
 
-        public static int[] ReverseArray(int[] array)
+        public static int[] Reverse(int[] array)
         {
             int[] copiedArray = CopyArray(array);
 
             int count = 1;
             for (int i = 0; i < copiedArray.Length / 2; i++)
             {
-                SwapAToB(ref copiedArray, i, copiedArray.Length - count);
+                Swap(ref copiedArray, i, copiedArray.Length - count);
                 count++;
 
             }
@@ -129,14 +129,14 @@ namespace HW_AIO
             return oddCounter;
         }                      //4.7
 
-        public static int[] ReverseHalfOfArray(int[] array)
+        public static int[] ReverseHalf(int[] array)
         {
             int[] copiedArray = CopyArray(array);
             int evensity = copiedArray.Length % 2;
 
             for (int i = 0; i < copiedArray.Length / 2; i++)
             {   
-                SwapAToB(ref copiedArray, i, copiedArray.Length / 2 + i + evensity);
+                Swap(ref copiedArray, i, copiedArray.Length / 2 + i + evensity);
             }
 
             return copiedArray;
@@ -151,7 +151,7 @@ namespace HW_AIO
             {
                 for (int j = i; j > 0 && copiedArray[j - 1] > copiedArray[j]; j--)
                 {
-                    SwapAToB(ref copiedArray, j - 1, j);
+                    Swap(ref copiedArray, j - 1, j);
                 }
             }
             return copiedArray;
@@ -176,7 +176,7 @@ namespace HW_AIO
                     }
                 }
 
-                SwapAToB(ref copiedArray, i, max);
+                Swap(ref copiedArray, i, max);
             }
 
             return copiedArray;
@@ -192,7 +192,7 @@ namespace HW_AIO
             Console.WriteLine();
         }
 
-        public static void SwapAToB<T>(ref T[] array, int firstIndex, int secondIndex)
+        public static void Swap<T>(ref T[] array, int firstIndex, int secondIndex)
         {
             if (array.Length == 0)
             {

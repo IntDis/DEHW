@@ -70,7 +70,7 @@ Console.WriteLine();
 //int[] arr = ArrayMethods.GenerateRandomArray(6);
 //ArrayMethods.PrintArray(arr);
 
-//ArrayMethods.SwapAToB(ref arr, 0, arr.Length - 1);
+//ArrayMethods.Swap(ref arr, 0, arr.Length - 1);
 
 
 
@@ -84,34 +84,35 @@ Console.WriteLine();
 
 //Console.WriteLine(ArrayMethods.GetSumOfEvenIndexNumbers(arr));                                //4.5
 
-//ArrayMethods.PrintArray(ArrayMethods.ReverseArray(arr));                                      //4.6
+//ArrayMethods.PrintArray(ArrayMethods.Reverse(arr));                                           //4.6
 
 //Console.WriteLine(ArrayMethods.GetAmountOfOddElements(arr));                                  //4.7
 
-//ArrayMethods.PrintArray(ArrayMethods.ReverseHalfOfArray(arr));                                //4.8
+//ArrayMethods.PrintArray(ArrayMethods.ReverseHalf(arr));                                       //4.8
 
 //ArrayMethods.PrintArray(ArrayMethods.SortArrayInAscendingOrderByInjection(arr));              //4.9
 
 //ArrayMethods.PrintArray(ArrayMethods.SortArrayInDescendingOrderBySelection(arr));             //4.10
 
 
-int[,] dArr = new int[2, 3] { { 0, 1, 2 },
-                              { 3, 4, 5 } };
+//int[,] dArr = new int[2, 3] { { 0, 1, 2 },
+//                              { 3, 4, 5 } };
 //Console.WriteLine(dArr.Length);
-//Console.WriteLine(dArr[1,1]);
-//DoubleArray.PrintDoubleArray(dArr);
+//Console.WriteLine(dArr[1, 1]);
+//DoubleArrayMethods.PrintDoubleArray(dArr);
 //Console.WriteLine(dArr.GetLength(1));
 
-int[,] randomDoubleArray = DoubleArrayMethods.GenerateRandomArray(3, 3);
-DoubleArrayMethods.PrintDoubleArray(randomDoubleArray);
-Console.WriteLine();
-Console.WriteLine(DoubleArrayMethods.GetMaxElement(randomDoubleArray));                         //5.1
-Console.WriteLine(DoubleArrayMethods.GetMinElement(randomDoubleArray));                         //5.2
-Console.WriteLine();
-ArrayMethods.PrintArray(DoubleArrayMethods.GetMaxElementIndex(randomDoubleArray));              //5.3
-ArrayMethods.PrintArray(DoubleArrayMethods.GetMinElementIndex(randomDoubleArray));              //5.4
-Console.WriteLine();
-
-                                                                                                //5.5           //undone
-
-DoubleArrayMethods.PrintDoubleArray(DoubleArrayMethods.GetMatrixMirroredByGeneralDiagonal(randomDoubleArray));  //5.6
+//int[,] randomDoubleArray = DoubleArrayMethods.GenerateRandomArray(3, 3);
+//DoubleArrayMethods.PrintDoubleArray(randomDoubleArray);
+//Console.WriteLine();
+//Console.WriteLine(DoubleArrayMethods.GetMaxElement(randomDoubleArray));                                          //5.1
+//Console.WriteLine();
+//Console.WriteLine(DoubleArrayMethods.GetMinElement(randomDoubleArray));                                          //5.2
+//Console.WriteLine();
+//ArrayMethods.PrintArray(DoubleArrayMethods.GetMaxElementIndex(randomDoubleArray));                               //5.3
+//Console.WriteLine();
+//ArrayMethods.PrintArray(DoubleArrayMethods.GetMinElementIndex(randomDoubleArray));                               //5.4
+//Console.WriteLine();
+//Console.WriteLine(DoubleArrayMethods.GetAmountOfElementsWhichHigherThanNeighbours(randomDoubleArray));           //5.5
+//Console.WriteLine();
+//DoubleArrayMethods.PrintDoubleArray(DoubleArrayMethods.GetMatrixMirroredByGeneralDiagonal(randomDoubleArray));   //5.6
