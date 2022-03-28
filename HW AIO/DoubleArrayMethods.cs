@@ -10,6 +10,11 @@ namespace HW_AIO
     {
         public static int GetMaxElement(int[,] doubleArray)
         {
+            if (doubleArray.Length == 0)
+            {
+                throw new Exception("Array length is 0");
+            }
+
             int maxElement = doubleArray[0, 0];
 
 
@@ -28,6 +33,11 @@ namespace HW_AIO
 
         public static int GetMinElement(int[,] doubleArray)
         {
+            if (doubleArray.Length == 0)
+            {
+                throw new Exception("Array length is 0");
+            }
+
             int minElement = doubleArray[0, 0];
 
 
@@ -46,6 +56,11 @@ namespace HW_AIO
 
         public static int[] GetMinElementIndex(int[,] doubleArray)
         {
+            if (doubleArray.Length == 0)
+            {
+                throw new Exception("Array length is 0");
+            }
+
             int[] indexArray = new int[2];
             int minElement = doubleArray[0, 0];
 
@@ -67,6 +82,11 @@ namespace HW_AIO
             
         public static int[] GetMaxElementIndex(int[,] doubleArray)
         {
+            if (doubleArray.Length == 0)
+            {
+                throw new Exception("Array length is 0");
+            }
+
             int[] indexArray = new int[2];
             int maxElement = doubleArray[0, 0];
 
@@ -88,16 +108,21 @@ namespace HW_AIO
 
         public static int GetAmountOfElementsWhichHigherThanNeighbours(int[,] doubleArray)
         {
+            if (doubleArray.Length == 0)
+            {
+                throw new Exception("Array length is 0");
+            }
+
             int count = 0;
 
             for (int i = 0; i < doubleArray.GetLength(0); i++)
             {
                 for (int j = 0; j < doubleArray.GetLength(1); j++)
                 {
-                    if (i - 1 > 0 || doubleArray[i, j] > doubleArray[i - 1, j]
-                    && doubleArray[i, j] > doubleArray[i, j + 1]
-                    && doubleArray[i, j] > doubleArray[i + 1, j]
-                    && doubleArray[i, j] > doubleArray[i, j - 1])
+                    if ((i == 0 || doubleArray[i,j] > doubleArray[i-1,j]) 
+                     && (i == doubleArray.GetLength(0)-1 || doubleArray[i, j] > doubleArray[i + 1, j])
+                     && (j == 0 || doubleArray[i, j] > doubleArray[i, j-1]) 
+                     && (j == doubleArray.GetLength(1) - 1 || doubleArray[i, j] > doubleArray[i, j+1]))
                     {
                         count++;
                     }
@@ -109,7 +134,11 @@ namespace HW_AIO
 
         public static int[,] GetMatrixMirroredByGeneralDiagonal(int[,] doubleArray)
         {
-            if (doubleArray.GetLength(0) != doubleArray.GetLength(0))
+            if (doubleArray.Length == 0)
+            {
+                throw new Exception("Array length is 0");
+            }
+            else if (doubleArray.GetLength(0) != doubleArray.GetLength(0))
             {
                 throw new ArgumentException("Input array must be matrix");
             }
@@ -131,6 +160,11 @@ namespace HW_AIO
 
         public static int[,] CopyDoubleArray(int[,] doubleArray)
         {
+            if (doubleArray.Length == 0)
+            {
+                throw new Exception("Array length is 0");
+            }
+
             int[,] copiedDoubleArray = new int[doubleArray.GetLength(0), doubleArray.GetLength(1)];
 
             for (int i = 0; i < doubleArray.GetLength(0); i++)
@@ -157,7 +191,7 @@ namespace HW_AIO
             {
                 for (int j = 0; j < doubleArray.GetLength(1); j++)
                 {
-                    doubleArray[i, j] = random.Next(0, 100);
+                    doubleArray[i, j] = random.Next(0, 10);
                 }
                 
             }
